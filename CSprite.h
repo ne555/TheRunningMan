@@ -3,7 +3,8 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
-#include "CGame.h"
+//#include "CGame.h"
+class CGame;
 
 class CSprite
 {

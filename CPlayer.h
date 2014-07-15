@@ -3,7 +3,7 @@
 
 
 #include "CSprite.h"
-#include "CGame.h"
+//#include "CGame.h"
 #include <string>
 
 

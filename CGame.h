@@ -4,7 +4,7 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
-#include "CPlayer.h"
+//#include "CPlayer.h"
 
 
 class CGame
