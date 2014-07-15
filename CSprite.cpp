@@ -1,4 +1,5 @@
 #include "CSprite.h"
+#include "CGame.h"
 #include <iostream>
 
 CSprite::CSprite()
@@ -18,7 +19,7 @@ void CSprite::Load (const char* cPath, int R, int G, int B)
     else
     {
         SDL_SetColorKey(sImage, SDL_TRUE, SDL_MapRGB(sImage-> format, R, G, B));
-        tImage = SDL_CreateTextureFromSurface(Game.GetRenderer(), sImage); //<-- Creates error message no 2)
+        tImage = SDL_CreateTextureFromSurface(Game->GetRenderer(), sImage); //<-- Creates error message no 2)
         if (tImage == NULL)
         {
             std::cout << "Fehler beim Umwandeln von einer Surface in eine Textur der Grafik " << cPath << "! SDL_Error: " << SDL_GetError() <<"\n";
@@ -31,5 +32,5 @@ void CSprite::Load (const char* cPath, int R, int G, int B)
 
 void CSprite::Render()
 {
-    SDL_RenderCopy (Game.GetRenderer(),tImage,NULL,&rcDest); //<-- Creates error message no 3)
+    SDL_RenderCopy (Game->GetRenderer(),tImage,NULL,&rcDest); //<-- Creates error message no 3)
 }
